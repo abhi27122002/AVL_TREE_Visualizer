@@ -14,7 +14,17 @@ class Circle{
         this.ypos = ypos;
         this.radius = radius;
         this.color = color;
-        this.text = text
+        this.text = text;
+        this.id =  "",
+        this.value= null,
+        this.parent = "",
+        this.left = null,   
+        this.right =  null,
+        this.height =  1,
+        this.circleEl = null,
+        this.textEl= null
+        this.parentX = px;
+        this.parenty = py;
     }
 
     draw(context){
@@ -31,7 +41,19 @@ class Circle{
         context.fillText(this.text, this.xpos, this.ypos);
         context.fillStyle="black";      //backgroundcolor of node
     } 
-}
+
+
+    drawline( ){
+        context.moveTo(parentX, parenty+25);
+        context.lineTo(parentX-xpos, parenty+ypos);
+        context.stroke();
+    }
+    
+};
+
+
+
+
 
 
 let x1 = 50;
@@ -46,16 +68,14 @@ let createCircles = function(circle){
 }
 
 function root(val){
-    let my_circle =new Circle(x,y,25,"black",val);
+    let my_circle = new Circle(x,y,25,"black",val);
     all_circles.push(my_circle);
     createCircles(all_circles[i]);
     i = i+1;
 }
 
 function right(val){
-    context.moveTo(x, y+25);
-    context.lineTo(x+x1, y+y1);
-    context.stroke();
+    drawline(x,y)
     x = x + x1;
     y = y + y1;
     let my_circle = new Circle(x,y,25,"black",val);
@@ -65,9 +85,7 @@ function right(val){
 }
 
 function left(val){
-    context.moveTo(x, y+25);
-    context.lineTo(x-x1, y+y1);
-    context.stroke();
+    drawline(x, y)
     x = x - x1;
     y = y + y1;
     let my_circle =new Circle(x,y,25,"black",val);
