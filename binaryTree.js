@@ -58,19 +58,10 @@ class Node
     }
 }
 
-let all_Nodes = [];
-let power2 = [];
 
 var x = 300;
-var cnt = 0;
 const y = 100;
 
-
-
-// const m = function max(x,y){
-//     if(x => y) return x;
-//     else return y;
-// }
 function heights(root,node,h){
     if(root == null) return 0;
     if(root == node) return h;
