@@ -1,0 +1,116 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(248, 241, 233);
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    flex: 1;
+    background-color: rgb(190, 186, 186);
+    margin-bottom: 10px;
+}
+/* #navbar::before{
+    content: " ";
+    background-color: #000;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}  
+*/
+
+/* navigation bar logo */
+#logo{
+    /* margin: 20px 40px; */
+}
+#logo img{
+    height:40px;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+#navbar ul{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    /* justify-content: center; */
+    
+}
+ul li{
+    list-style: none;
+    font-size: larger;
+    
+}
+ul li a{
+    color: black;
+    display: block;
+    padding: 4px 50px;
+    border-radius: 20px;
+    text-decoration: none;
+    
+    /* justify-content: space-between; */
+}
+ul li a:hover{
+    color: white;
+    background-color: black;
+}
+
+/* after navigation bar  */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 170px;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+#home p{
+    margin-top: 15px;
+    font-size: large;
+}
+
+/* services */
+.mainheading{
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    margin-top:10px;
+    margin-bottom: 20px;
+    padding: 7px 7px;
+}
+
+#services{
+    /* margin 30px; */
+    display: flex;
+    /* height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center; */
+}
+#services .box{
+    border: 2px solid red;
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 7px 7px;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+}
+#services .box img{
+    height: 300px;
+    width:300px;
+}
